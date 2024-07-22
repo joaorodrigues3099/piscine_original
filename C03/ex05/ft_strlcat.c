@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 15:24:19 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/22 14:14:37 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/22 18:30:22 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,13 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	*s = '\0';
 	return (dst_length + (src - src_start));
 }
+/*
+int	main(void)
+{
+	char	*str = "World";
+	char	dest[] = "Hello ";
+#include <stdio.h>
+	printf("function: %d\n", ft_strlcat(dest, str, 10));
+	printf("dets: %s\n", dest);
+}
+*/
