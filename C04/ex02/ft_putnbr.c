@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 20:05:45 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/19 20:06:30 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/22 18:49:42 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,19 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int	ft_nbr_to_arr(int nbr,char arr[12])
+int	ft_nbr_to_arr(int nbr, char arr[12])
 {
 	int	i;
-	
+
 	i = 0;
+	if (nbr == 2147483647 || nbr == -2147483648)
+	{
+		if (nbr == 2147483647)
+			write(1, "2147483647", 10);
+		if (nbr == -2147483648)
+			write(1, "-2147483648", 11);
+		return (0);
+	}
 	while ((nbr / 10) > 0)
 	{
 		arr[i] = (48 + (nbr % 10));
@@ -42,7 +50,7 @@ void	ft_putnbr(int nbr)
 	int		i;
 	int		j;
 
-	if (nbr < 0)
+	if (nbr < 0 && nbr != -2147483648)
 	{
 		nbr = -nbr;
 		ft_putchar('-');
@@ -55,9 +63,10 @@ void	ft_putnbr(int nbr)
 		j++;
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_putnbr(-321783);
 	return (0);
 }
+*/

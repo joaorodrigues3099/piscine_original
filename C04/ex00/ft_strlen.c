@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joao-alm <joao-alm@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 09:35:10 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/19 10:29:08 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/22 18:52:16 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
-
+/*
 int main(void)
 {
-	char	*str;
+	char	*str = "Hello";
 
 	printf("Count: %d\n", ft_strlen(str));
 	return (0);
 }
+*/

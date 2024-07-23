@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 09:37:43 by nacao             #+#    #+#             */
-/*   Updated: 2024/07/22 09:55:58 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/23 07:41:24 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ void	ft_display(int **grid, int size) //
 			j++; //next digit
 		}
 		ft_putchar('\n'); //jump line
-		i++; nex
+		i++;
 	}
 }
