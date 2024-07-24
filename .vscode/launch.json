@@ -5,8 +5,8 @@
             "name": "ArgsDebug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/C04/ex04/a.out", // Path to your compiled executable
-            "args": ["13", "01"], 
+            "program": "${workspaceFolder}/C04/ex05/ft_atoi_base", // Path to your compiled executable
+            "args": ["-12", "01"], 
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,

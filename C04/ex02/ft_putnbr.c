@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 20:05:45 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/22 18:49:42 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/24 12:10:52 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_nbr_to_arr(int nbr, char arr[12])
 	}
 	while ((nbr / 10) > 0)
 	{
-		arr[i] = (48 + (nbr % 10));
+		arr[i] = ('0' + (nbr % 10));
 		nbr /= 10;
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 18:56:07 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/23 16:30:30 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/24 11:09:56 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int	ft_atoi(char *str)
 	i = 0;
 	sign = 0;
 	result = 0;
-	while (str[i] == ' ')
+	while (str[i] == ' ' || str[i] == '\a' || str[i] == '\b' || str[i] == '\t'
+		|| str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
 	while (str[i] == '-' || str[i] == '+')
 	{
