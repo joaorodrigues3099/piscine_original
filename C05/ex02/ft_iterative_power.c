@@ -6,12 +6,12 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 12:11:25 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/24 13:19:03 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/24 17:14:41 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+//#include <stdio.h>
+//#include <stdlib.h>
 
 int	ft_iterative_power(int nb, int power)
 {

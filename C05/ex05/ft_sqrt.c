@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/24 10:08:44 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/24 17:14:20 by joao-alm         ###   ########.fr       */
+/*   Created: 2024/07/24 16:01:32 by joao-alm          #+#    #+#             */
+/*   Updated: 2024/07/24 17:15:07 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdlib.h>
 //#include <stdio.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_sqrt(int nb)
 {
 	int	i;
-	int	n;
 
-	if (nb == 0)
-		return (1);
-	if (!nb)
-		return (0);
-	i = 1;
-	n = nb;
-	while (i != nb)
+	i = 0;
+	while (i <= nb)
 	{
-		n *= (nb - i);
+		if ((i * i) == nb)
+			return (i);
 		i++;
 	}
-	return (n);
+	return (0);
 }
 /*
-int	main(void)
+int	main(int argc, char **argv)
 {
-	printf("ft: %d", ft_interative_factorial(3));
+	if (argc == 2)
+		printf("square root: %d\n", ft_sqrt(atoi(argv[1])));
 	return (0);
 }
 */

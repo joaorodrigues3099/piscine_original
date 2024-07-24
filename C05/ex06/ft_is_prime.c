@@ -6,14 +6,14 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 13:59:08 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/24 14:27:37 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/24 17:16:58 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdlib.h>
 //#include <stdio.h>
 
-int ft_divider(int nb, int divider)
+int	ft_divider(int nb, int divider)
 {
 	if (divider == 1)
 		return (1);
