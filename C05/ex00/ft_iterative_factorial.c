@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 10:08:44 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/24 17:14:20 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/24 18:53:44 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_iterative_factorial(int nb)
 
 	if (nb == 0)
 		return (1);
-	if (!nb)
+	if (nb < 0)
 		return (0);
 	i = 1;
 	n = nb;
