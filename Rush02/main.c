@@ -6,11 +6,17 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 09:45:00 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/27 10:56:26 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/27 18:34:50 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+
+#include <unistd.h>
+#include <stdio.h>
+
+char	*ft_atoi(char *str);
+void	ft_convert(char *buffer, int size);
+int	ft_count(char *buffer);
 
 char	*get_number(int argc, char **argv)
 {
@@ -18,10 +24,10 @@ char	*get_number(int argc, char **argv)
 		return (ft_atoi(argv[1]));
 	if (argc == 3)
 		return (ft_atoi(argv[2]));
-	return (NULL)
+	return (NULL);
 }
 
-//library	get_library(int argc, char **argv)
+/*library	get_library(int argc, char **argv)
 {
 	//library
 
@@ -29,17 +35,23 @@ char	*get_number(int argc, char **argv)
 	if (argc == 3)
 		//library = argv[1];
 	return (library);	
-}
+}*/
 
 int	main(int argc, char **argv)
 {
-	int	nbr;
-	
+	char	*nbr;
+
 	nbr = get_number(argc, argv);
-	//library = get_library(argc, argv);
 	if (!nbr)
 		write(1, "Error", 5);
-	if (!library)
+	int i = 0;
+	while (nbr[i] != '\0')
+	{
+		printf("nbr: %d\n", nbr[i]);
+		i++;
+	}
+	ft_convert(nbr, ft_count(nbr));
+	/*if (!library)
 		write(1, "Dict Error", 10);
-	write(1, "\n", 1);
+	write(1, "\n", 1);*/
 }

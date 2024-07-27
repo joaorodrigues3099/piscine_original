@@ -6,10 +6,12 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 18:56:07 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/27 10:50:54 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/27 17:35:41 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include <unistd.h>
 #include <stdbool.h>
 
 bool	ft_is_nbr(char c)
@@ -21,8 +23,8 @@ bool	ft_is_nbr(char c)
 
 bool	ft_is_space(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\n' 
-	|| c == '\v' || c == '\f' || c == '\r')
+	if (c == ' ' || c == '\t' || c == '\n'
+		|| c == '\v' || c == '\f' || c == '\r')
 		return (true);
 	else
 		return (false);
@@ -30,7 +32,7 @@ bool	ft_is_space(char c)
 
 bool	ft_is_sign(char c)
 {
-	if (str[i] == '-' || str[i] == '+')
+	if (c == '-' || c == '+')
 		return (true);
 	else
 		return (false);
@@ -53,33 +55,35 @@ int	ft_nbrlen(char	*str)
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 
 char	*ft_atoi(char *str)
 {
-	int	sign;
 	int	i;
-	int	*result;
+	int	j;
+	char	*result;
 
-	if (!ft_nbrlen)
+	if (ft_nbrlen(str) == 0)
 		return (NULL);
-	*result = (char *)malloc(ft_nbrlen);
+	result = (char *)malloc(ft_nbrlen(str));
 	i = 0;
 	while (ft_is_space(str[i]))
 		i++;
 	if (ft_is_sign(str[i]))
 	{
-		if (!ft_is_nbr(str[i + 1]))
-			return (NULL);
-		if (str[i] == '-')
+		if (!ft_is_nbr(str[i + 1]) || str[i] == '-')
 			return (NULL);
 		i++;
 	}
+	while (str[i] == 0 && str[i + 1] == 0)
+		i++;
+	j = 0;
 	while (ft_is_nbr(str[i]))
 	{
-		result += (str[i] - 48);
+		result[j] = str[i];
 		i++;
+		j++;
 	}
 	return (result);
 }

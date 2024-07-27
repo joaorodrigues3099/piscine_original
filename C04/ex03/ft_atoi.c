@@ -6,7 +6,7 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 18:56:07 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/24 11:09:56 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/27 09:58:20 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ int	ft_atoi(char *str)
 	int	result;
 
 	i = 0;
-	sign = 0;
+	sign = 1;
 	result = 0;
-	while (str[i] == ' ' || str[i] == '\a' || str[i] == '\b' || str[i] == '\t'
-		|| str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' 
+	|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	while ((str[i] == '-' || str[i] == '+')
 	{
-		if (str[i] == '-')
-			sign++;
+		if (str[i] == '-' && ft_is_nbr(str[i + 1]))
+			sign *= -1;
 		i++;
 	}
 	while (ft_is_nbr(str[i]))
@@ -44,9 +44,7 @@ int	ft_atoi(char *str)
 		result += (str[i] - 48);
 		i++;
 	}
-	if (sign % 2 != 0)
-		result = -result;
-	return (result);
+	return (result * sign);
 }
 /*
 int	main(int argc, char **argv)
