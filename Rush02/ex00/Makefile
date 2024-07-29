@@ -3,20 +3,21 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bpiovano <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/27 10:51:30 by bpiovano          #+#    #+#              #
-#    Updated: 2024/07/27 14:44:32 by bpiovano         ###   ########.fr        #
+#    Updated: 2024/07/28 23:36:05 by joao-alm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SOURCES	= srcs/NAMEOFOURFILES
+SOURCES	= main.c ft_atoi.c print.c dic.c helpers.c
 OBJECTS	= ${SOURCES:.c=.o}
-INCLUDES	= FILES
+INCLUDES	= cfiles
 NAME	= rush-02
 CC	= cc
 RM	= rm -f
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -fPIE
+LDFLAGS = -pie
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${INCLUDES}

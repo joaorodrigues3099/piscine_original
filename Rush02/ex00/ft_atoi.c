@@ -6,13 +6,11 @@
 /*   By: joao-alm <joao-alm@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 18:56:07 by joao-alm          #+#    #+#             */
-/*   Updated: 2024/07/27 17:35:41 by joao-alm         ###   ########.fr       */
+/*   Updated: 2024/07/28 23:37:16 by joao-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdbool.h>
+#include "header.h"
 
 bool	ft_is_nbr(char c)
 {
@@ -60,8 +58,8 @@ int	ft_nbrlen(char	*str)
 
 char	*ft_atoi(char *str)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*result;
 
 	if (ft_nbrlen(str) == 0)
@@ -76,14 +74,13 @@ char	*ft_atoi(char *str)
 			return (NULL);
 		i++;
 	}
-	while (str[i] == 0 && str[i + 1] == 0)
+	while (str[i] == 0 && str[i + 1] == 0 && str[i + 1] != '\0')
 		i++;
 	j = 0;
 	while (ft_is_nbr(str[i]))
 	{
-		result[j] = str[i];
-		i++;
-		j++;
+		result[j++] = str[i++];
 	}
+	result[j] = '\0';
 	return (result);
 }
